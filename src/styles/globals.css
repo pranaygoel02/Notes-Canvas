@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    *,*:after,*:before {
+        /* box-sizing: border-box; */
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+  .flex-row-start {
+    @apply flex flex-row items-start;
+  }
+  input {
+    @apply outline-none focus:border bg-transparent text-black;
+  }
+  #canvas > *:focus-within {
+    @apply z-10;
+  }
+  #canvas > *:not(:focus-within) {
+    @apply z-0;
+  }
+}
